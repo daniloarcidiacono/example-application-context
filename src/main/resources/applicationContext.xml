@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="snoopy" class="com.objectway.stage.example.applicationcontext.beans.Dog">
+        <constructor-arg name="name" value="Snoopy" />
+        <constructor-arg name="age" value="3" />
+        <constructor-arg name="weight" value="8" />
+    </bean>
+
+    <beans profile="profileOne">
+        <import resource="applicationContext-profileOne.xml" />
+    </beans>
+
+    <beans profile="profileTwo">
+        <import resource="applicationContext-profileTwo.xml" />
+    </beans>
+</beans>

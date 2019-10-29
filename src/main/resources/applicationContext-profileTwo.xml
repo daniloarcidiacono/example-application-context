@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="person" class="com.objectway.stage.example.applicationcontext.beans.PersonWithDog">
+        <constructor-arg name="name" value="Charlie" />
+        <constructor-arg name="surname" value="Brown" />
+        <constructor-arg name="age" value="8" />
+        <constructor-arg name="dog" ref="snoopy" />
+    </bean>
+</beans>
